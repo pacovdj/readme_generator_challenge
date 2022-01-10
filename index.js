@@ -62,12 +62,15 @@ inquierer.prompt(
     `
 
     }
-    )
+    );
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
+createNewFile(title,template);
 // TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+function createNewFile(fileName,data){
+fs.writeFile[`./${fileName.toLowerCase().split(' ').join('')}.md`,data,(err)=>{
+    if(err){
+        console.log(err)
+    }
+    console.log('Your readme has been generated');
+})
+}
